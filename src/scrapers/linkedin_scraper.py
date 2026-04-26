@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 from playwright.sync_api import sync_playwright
-from src.scraping.base_scraper import BaseScraper
+from src.scrapers.base_scraper import BaseScraper
 from typing import Dict, Any, Generator
 from src.models.job import Job
 
