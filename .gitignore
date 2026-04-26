@@ -1,5 +1,4 @@
 auth/
 __pycache__/
 *.db
-
-debug.py
+.env

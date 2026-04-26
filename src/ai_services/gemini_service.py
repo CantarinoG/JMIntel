@@ -43,7 +43,7 @@ class GeminiService(BaseAIService):
             except Exception as e:
                 error_msg = str(e)
                 print(error_msg)
-                if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                if any(x in error_msg for x in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE"]):
                     time.sleep(60)
                     continue
 
