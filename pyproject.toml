@@ -5,5 +5,6 @@ description = "JMIntel (Job Market Intelligence) is a data analytics project foc
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "google-genai>=1.73.1",
     "playwright>=1.58.0",
 ]
