@@ -4,4 +4,8 @@ version = "0.0.0"
 description = "JMIntel (Job Market Intelligence) is a data analytics project focused on extracting insights from job market data collected from online employment platforms."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "google-genai>=1.73.1",
+    "playwright>=1.58.0",
+    "python-dotenv>=1.2.2",
+]
