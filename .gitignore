@@ -1,4 +1,9 @@
 auth/
 __pycache__/
-*.db
 .env
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/outputs/*
+!data/outputs/.gitkeep
