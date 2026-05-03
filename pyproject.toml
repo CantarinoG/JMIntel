@@ -6,6 +6,10 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "google-genai>=1.73.1",
+    "ipykernel>=7.2.0",
+    "nbformat>=5.10.4",
+    "pandas>=3.0.2",
     "playwright>=1.58.0",
+    "plotly>=6.7.0",
     "python-dotenv>=1.2.2",
 ]
