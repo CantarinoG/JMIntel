@@ -2,6 +2,7 @@ import os
 import sys
 import argparse
 from dotenv import load_dotenv
+from pathlib import Path
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -9,6 +10,9 @@ from src.scrapers.linkedin_scraper import LinkedInScraper
 from src.databases.sqlite_repository import SQLiteJobRepository
 from src.ai_services.gemini_service import GeminiService
 from src.ai_services.job_processor import JobProcessor
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DB_PATH = ROOT_DIR / "data" / "raw" / "jobs.db"
 
 load_dotenv()
 
@@ -27,7 +31,7 @@ if not all([username, password, api_key]):
 
 print("[*] Initializing services...")
 scraper = LinkedInScraper()
-repo = SQLiteJobRepository()
+repo = SQLiteJobRepository(db_path=str(DB_PATH))
 ai_service = GeminiService()
 ai_service.configure(api_key=api_key)
 processor = JobProcessor(ai_service)
